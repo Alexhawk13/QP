@@ -1,0 +1,91 @@
+.banner {
+  background-color: #EDEFFE;
+}
+
+.banner h1 {
+  padding-bottom: 24px;
+  font-size: 40px;
+}
+
+.banner .container {
+  padding-top: 32px;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner .container>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--secondary-color);
+}
+
+.button {
+  text-decoration: none;
+  color: #FFF;
+  background-color: #6248FF;
+  border-radius: 60px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 14px;
+  font-weight: 500;
+  font-family: "Museo Sans", sans-serif;
+}
+
+.banner__button {
+  padding: 20px 68px;
+  margin: 32px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner .container {
+    padding-bottom: 24px;
+    padding-top: 40px;
+  }
+  .banner__button {
+    margin-top: 48px;
+  }
+
+  .banner__text {
+    padding: 0px 90px;
+  }
+  .banner h1 {
+    text-align: center;
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .banner .container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
+  .banner .container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .banner h1 {
+    text-align: left;
+    max-width: 40vw;
+    font-size: 64px;
+  }
+
+  .banner__text {
+    padding: 0;
+    max-width: 33vw;
+  }
+}

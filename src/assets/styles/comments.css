@@ -1,0 +1,189 @@
+section.comments {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+section.comment h2 {
+  align-self: center;
+  font-weight: 600;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#trick {
+  position: relative;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.passive {
+  transform: translate(100vw, 0);
+  transition: all .4s;
+}
+
+.active {
+  transform: none;
+}
+
+.next {
+  transform: translate(-100vw, 0);
+}
+
+.arrow {
+  padding: 16px 20px;
+  border-radius: 50%;
+  border: 1px solid #E0E0E0;
+  background-color: #fff;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 39px 0 0 0;
+}
+
+.slide .name,
+#trick .name {
+  padding: 8px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  font-family: "Museo Sans", sans-serif;
+}
+
+.slide .role,
+#trick .role {
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.slide .text,
+#trick .text {
+  font-family: "Museo Sans", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.pagination .counter {
+  font-family: "Museo Sans", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #4F62F6;
+}
+
+.quotes {
+  padding: 24px;
+}
+
+.slide>div>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide>div {
+  text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+  section.comments {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .comments .wrapper {
+    position: relative;
+  }
+  #left,#right {
+    position: absolute;
+  }
+  #left {
+    top: 50%;
+    left: 0;
+  }
+  #right {
+    top: 50%;
+    right: 0;
+  }
+
+  .slide .text,
+  #trick .text {
+    width: 73%;
+  }
+
+  .pagination {
+    padding-top: 32px;
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .comments h2 {
+    min-width: 33vw;
+  }
+
+  section.comments {
+    flex-direction: row;
+  }
+
+  .slide {
+    min-height: 282px;
+    justify-content: space-evenly;
+  }
+
+  .slide>div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 22%;
+  }
+
+  .slide>div>div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quotes {
+    position: absolute;
+    top: 115px;
+    left: 10px;
+  }
+
+  #left {
+    top: 50%;
+    left: -67%;
+  }
+  #right {
+    top: 50%;
+    right: 150%;
+  }
+
+  .pagination .counter {
+    margin-top: -50px;
+    margin-right: 70%;
+  }
+
+  .slide .text {
+    margin-left: -5%;
+  }
+}
